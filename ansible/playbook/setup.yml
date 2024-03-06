@@ -1,9 +1,15 @@
 ---
-- name: n
+- name: Deploy NodeJS Application
   hosts: ec2_instance
   become: yes
 
   tasks:
+    - name: Create a directory for Application
+      ansible.builtin.file:
+       path: "/my_node_app"
+       state: directory
+
+
     - name: Install Git
       apt:
         name: git
@@ -12,7 +18,7 @@
     - name: Clone Git Repo
       ansible.builtin.git:
         repo: 'https://github.com/Tarikul69/DevOps-Project.git'
-        dest: ''
+        dest: '/my_node_app'
         clone: yes
         update: yes
 
@@ -20,6 +26,25 @@
       apt:
         name: docker.io
         state: present
+
+    - name: Pull Node.js Docker Image
+      community.docker.docker_image:
+        name: node
+        tag: "14"
+        source: pull
+    
+    - name: Run Node.js app in Docker container
+      community.docker.docker_container:
+        name: mynodeapp_container
+        image: node:14
+        state: started
+        restart_policy: always
+        volumes:
+          - "/my_node_app:/usr/src/app"
+        working_dir: "/usr/src/app"
+        command: "npm start"
+        published_ports:
+          - "3000:3000"
 
     - name: start docker
       ansible.builtin.service:
