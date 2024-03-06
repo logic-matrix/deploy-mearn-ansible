@@ -1,4 +1,4 @@
-Title: Deploy a Mearn Application to a Linux Server
+<h2>Title: Deploy a Mearn Application to a Linux Server</h2>
 <br>1.Explain the Architecture 
 <br>2.Test Application Locally(Docker test)
 <br>3.Set up Production server(Ansible)
@@ -13,8 +13,8 @@ Title: Deploy a Mearn Application to a Linux Server
 #############################
 <br>
 <br>
-Solutions: 
-2.To test applications locally write a dockerfile based on the project requirement. Then build the docker file and then run the docker image mentioning the port. Here is a sample of my dockerfile: 
+Solutions:<br>
+2.To test applications locally write a dockerfile based on the project requirement. Then build the docker file and then run the docker image mentioning the port.
 
 
 3. To install all the required items to the Ubuntu server, Ansible is used here. Based on the project requirement we write our playbook file and inventory.
