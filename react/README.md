@@ -6,9 +6,13 @@ Title: Deploy a Mearn Application to a Linux Server
 5.Clone Application onto Production server
 6.Set up Nginx web server and set up server block configurations(Ansible)
 7.Run the application after configuring the environment.
+<br>
+<br>
 #############################
 #############################
 #############################
+<br>
+<br>
 Solutions: 
 2.To test applications locally write a dockerfile based on the project requirement. Then build the docker file and then run the docker image mentioning the port. Here is a sample of my dockerfile: 
 
