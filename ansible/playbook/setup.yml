@@ -1,0 +1,27 @@
+---
+- name: nginx install & start services
+  hosts: ec2_instance
+  become: yes
+
+  tasks:
+    - name: Install Git
+      apt:
+        name: git
+        state: present
+    - name: Install Docker
+      apt:
+        name: docker.io
+        state: present
+    - name: install nginx
+      apt:
+        name: nginx
+        state: latest
+
+    - name: start nginx
+      apt:
+        name: nginx
+        state: started
+
+    
+    
+      
