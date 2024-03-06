@@ -17,7 +17,7 @@ Solutions:<br>
 2.To test applications locally write a dockerfile based on the project requirement. Then build the docker file and then run the docker image mentioning the port.
 
 
-3. To install all the required items to the Ubuntu server, Ansible is used here. Based on the project requirement we write our playbook file and inventory.
+3.To install all the required items to the Ubuntu server, Ansible is used here. Based on the project requirement we write our playbook file and inventory.
 
 
 

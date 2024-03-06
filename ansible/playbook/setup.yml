@@ -1,5 +1,5 @@
 ---
-- name: nginx install & start services
+- name: n
   hosts: ec2_instance
   become: yes
 
@@ -8,19 +8,47 @@
       apt:
         name: git
         state: present
+
+    - name: Clone Git Repo
+      ansible.builtin.git:
+        repo: 'https://github.com/Tarikul69/DevOps-Project.git'
+        dest: ''
+        clone: yes
+        update: yes
+
     - name: Install Docker
       apt:
         name: docker.io
         state: present
+
+    - name: start docker
+      ansible.builtin.service:
+        name: docker 
+        state: started
+        enabled: yes 
+
+
     - name: install nginx
       apt:
         name: nginx
         state: latest
 
+    - name: Copy nginx configuration file
+      ansible.builtin.copy:
+        src: /path/to/your/nginx.conf
+        dest: /etc/nginx/nginx.conf
+        owner: root
+        group: root
+        mode: '0644'
+      notify: restart nginx
+
     - name: start nginx
       apt:
         name: nginx
         state: started
+
+    
+      
 
     
     
