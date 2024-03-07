@@ -15,6 +15,7 @@
         name: git
         state: present
 
+
     - name: Clone Git Repo
       ansible.builtin.git:
         repo: 'https://github.com/Tarikul69/DevOps-Project.git'
