@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Deploy a MERN Application to a Linux Server
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
