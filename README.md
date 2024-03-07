@@ -1,8 +1,6 @@
 # Deploy a MERN Application to a Linux Server
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
+## Install Docker
 
 In the project directory, you can run:
 
