@@ -1,15 +1,24 @@
 # Deploy a MERN Application to a Linux Server
 
-## Docker
+## 1.Create a Directory
+Make a directory using this command
+### `mkdir "/my_node_app"`
+
+## 2.Git
+Install git 
+
+Clone git repo
+### `git clone https://github.com/Tarikul69/DevOps-Project.git`
+
+## 3.Docker
 Install Docker
 ### `sudo apt install docker.io docker-compose`
 Then pull Node image
 ### `docker pull node:14`
 
-## Git
 
  
-## Nginx
+## 4.Nginx
 
 ### `npm run build`
 
