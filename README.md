@@ -1,8 +1,7 @@
 # Deploy a MERN Application to a Linux Server
 
 ## Install Docker
-
-In the project directory, you can run:
+###sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
 ### `npm start`
 
