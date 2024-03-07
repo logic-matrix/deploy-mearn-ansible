@@ -6,7 +6,7 @@ Make a directory using this command
 
 ## 2.Git
 Install git 
-
+### `sudo apt install git`
 Clone git repo
 ### `git clone https://github.com/Tarikul69/DevOps-Project.git`
 
@@ -15,10 +15,14 @@ Install Docker
 ### `sudo apt install docker.io docker-compose`
 Then pull Node image
 ### `docker pull node:14`
+Run NodeJs app in Docker container
+### ` docker run -p 3000:3000 -d my_node_app`
 
 
  
 ## 4.Nginx
+install Nginx
+### `sudo apt install nginx`
 
 ### `npm run build`
 
