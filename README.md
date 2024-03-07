@@ -2,6 +2,8 @@
 
 ## Install Docker
 ### `sudo apt install docker.io docker-compose`
+Then pull Node image
+### `docker pull node:14`
 
 ### `npm start`
 
